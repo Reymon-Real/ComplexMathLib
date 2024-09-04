@@ -1,3 +1,11 @@
+/**
+ * Esté archivo es parte de ComplexMathLib
+ * 
+ * Este archivo es de software libre: puedes redistribuir o modificar siempre y cuando
+ * se cumplan los terminos de la CC0-1.0
+ * 
+ * */
+
 .intel_syntax noprefix
 
 .globl suma, resta, mult, divs

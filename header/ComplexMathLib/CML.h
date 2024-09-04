@@ -1,7 +1,14 @@
-#ifndef __FUNCS_H__
-#define __FUNCS_H__
-#include <stdio.h>
+/**
+ * Esté archivo es parte de ComplexMathLib
+ * 
+ * Este archivo es de software libre: puedes redistribuir o modificar siempre y cuando
+ * se cumplan los terminos de la CC0-1.0
+ * 
+ * */
 
+#ifndef __CML_H__
+#define __CML_H__
+#include <stdio.h>
 
 /**
  * Estructura que define los números complejosS

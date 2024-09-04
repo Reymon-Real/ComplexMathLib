@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h.h>
 #include <CML.h>
 
 int main(void) {
