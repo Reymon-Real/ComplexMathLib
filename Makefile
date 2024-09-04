@@ -2,11 +2,12 @@ complex_c_files := src/ComplexMathLib/c
 complex_asm_files := src/ComplexMathLib/asm
 main_c_files := src/main
 main_asm_files := src/main
+header_ComplexMathLib_files := header/ComplexMathLib
 header_files := header
 bin_files := bin/execute
 obj_files := bin/obj
-gcc_execute := gcc -m64 -g3 -Wall -I $(header_files) -o
-gcc_obj := gcc -m64 -g3 -I $(header_files) -c
+gcc_execute := gcc -m64 -g3 -Wall -I $(header_ComplexMathLib_files) -I $(header_files) -o
+gcc_obj := gcc -m64 -g3 -I $(header_ComplexMathLib_files) -I $(header_files) -c
 
 all: general_object move_obj_files linker execute
 
