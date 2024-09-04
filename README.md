@@ -9,8 +9,11 @@ Incluye funciones para sumar, restar, multiplicar y dividir números complejos.
 ### Cálculo del módulo:
 Permite calcular la magnitud de un número complejo.
 
-### Cálculo de la fase:
-Proporciona funciones para determinar el ángulo de un número complejo.
+### Cálculo de potencias
+Permite calcular la potencia de un número complejo
+
+### Cálculo de raíces
+Permite calcular la raíz de un número complejo
 
 ### Conversión entre formas rectangular y polar:
 Facilita la conversión entre la forma rectangular (a + bi) y la forma polar (r∠θ) de los números complejos.
