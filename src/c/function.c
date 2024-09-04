@@ -6,7 +6,7 @@
  * Sintaxis:
  * complejo_t numero = init_complejo(real, imaginario);
  */
-complejo_t init_complejos(double num1, double num2) {
+complejo_t init_complejo(double num1, double num2) {
 	return (complejo_t) { num1, num2 };
 }
 
@@ -88,17 +88,6 @@ complejo_t resta_complejo_real(complejo_t com1, double real) {
 	return (complejo_t) { resta(com1.real, real) };
 }
 
-/**
- * Multiplica un número complejo por un número dado
- * 
- * Formula: (a1 * número) + i(b1 * número)
- * 
- * Sintaxis:
- * complejo_t complejo_2 = mult_complejo_real(complejo_1, número);
- */
-complejo_t mult_complejo_real(complejo_t com, double num) {
-	return (complejo_t) { mult(com.real, num), mult(com.img, num) };
-}
 
 /**
  * Multiplica dos números complejos
@@ -113,6 +102,36 @@ complejo_t mult_complejos(complejo_t com1, complejo_t com2) {
 		resta( mult(com1.real, com2.real), mult(com1.img, com2.img) ),
 		suma( mult(com1.real, com2.img), mult(com1.img, com2.real) )
 		};
+}
+
+/**
+ * Multiplica un número complejo por un número dado
+ * 
+ * Formula: (a1 * número) + i(b1 * número)
+ * 
+ * Sintaxis:
+ * complejo_t complejo_2 = mult_complejo_real(complejo_1, número);
+ */
+complejo_t mult_complejo_real(complejo_t com, double num) {
+	return (complejo_t) { mult(com.real, num), mult(com.img, num) };
+}
+
+/**
+ * Divide dos números complejos
+ * 
+ * Formula: ((a1 * a2 + b1 * b2) + i(b1 * a2 - a1 * b2)) / a^2 + b^2
+ * 
+ * Sintaxis:
+ * complejo_t complejo_3 = divs_complejos(complejo_1, complejo_2);
+ */
+complejo_t divs_complejos(complejo_t com1, complejo_t com2) {
+	return (complejo_t) { 
+		divs( suma( mult(com1.real, com2.real), mult(com1.img, com2.img) ), 
+		suma( mult(com2.real, com2.real), mult(com2.img, com2.img) ) ),
+
+		divs( resta( mult(com1.real, com2.img), mult(com2.real, com1.img) ), 
+		suma( mult(com2.real, com2.real), mult(com2.img, com2.img) ) )
+	};
 }
 
 /**
@@ -140,22 +159,4 @@ complejo_t divs_complejo_real_numerador(complejo_t com, double num) {
 	divs( mult(com.real, num), suma( mult(com.real, com.real), mult(com.img, com.img) ) ),
 	divs( mult(com.img, num), suma( mult(com.real, com.real), mult(com.img, com.img) ) ),
 	 };
-}
-
-/**
- * Divide dos números complejos
- * 
- * Formula: ((a1 * a2 + b1 * b2) + i(b1 * a2 - a1 * b2)) / a^2 + b^2
- * 
- * Sintaxis:
- * complejo_t complejo_3 = divs_complejos(complejo_1, complejo_2);
- */
-complejo_t divs_complejos(complejo_t com1, complejo_t com2) {
-	return (complejo_t) { 
-		divs( suma( mult(com1.real, com2.real), mult(com1.img, com2.img) ), 
-		suma( mult(com2.real, com2.real), mult(com2.img, com2.img) ) ),
-
-		divs( resta( mult(com1.real, com2.img), mult(com2.real, com1.img) ), 
-		suma( mult(com2.real, com2.real), mult(com2.img, com2.img) ) )
-	};
 }

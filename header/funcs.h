@@ -20,18 +20,19 @@ void printf_complejo(complejo_t com); 			 // Función definida en C
 void printf_complejo_imaginario(complejo_t com); // Función definida en C
 void printf_complejo_real(complejo_t com);		 // Función definida en C
 
-complejo_t init_complejos(double num1, double num2); // Función definida en C
+complejo_t init_complejo(double num1, double num2); // Función definida en C
 
 complejo_t suma_complejos(complejo_t com1, complejo_t com2);  // Función definida en C
 complejo_t resta_complejos(complejo_t com1, complejo_t com2); // Función definida en C
 
 complejo_t suma_complejo_real(complejo_t com1, double real); // Función definida en C
-complejo_t resta_complejo_real(complejo_t com1, complejo_t com2); // Función definida en C
+complejo_t resta_complejo_real(complejo_t com1, double real); // Función definida en C
 
 complejo_t mult_complejos(complejo_t com1, complejo_t com2); // Función definida en C
 complejo_t divs_complejos(complejo_t com1, complejo_t com2); // Función definida en C
 
-complejo_t mult_complejo_real(complejo_t com, double num); // Función definida en C
-complejo_t divs_complejo_numero(complejo_t com, double num); // Función definida en C
+complejo_t mult_complejo_real(complejo_t com, double num); 			  // Función definida en C
+complejo_t divs_complejo_real_denominador(complejo_t com, double num); // Función definida en C
+complejo_t divs_complejo_real_numerador(complejo_t com, double num);  // Función definida en C
 
 #endif
