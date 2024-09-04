@@ -1,4 +1,4 @@
-#include "../../header/funcs.h"
+#include <funcs.h>
 
 /**
  * Inicializa el número complejo

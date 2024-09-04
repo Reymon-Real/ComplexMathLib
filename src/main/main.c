@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "../../header/funcs.h"
+#include <funcs.h>
 
 int main(void) {
 	complejo_t a = init_complejo(1, 1);

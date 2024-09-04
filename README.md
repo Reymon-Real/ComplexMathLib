@@ -35,6 +35,8 @@ Solo funciona en Windows 10 y 11 debido a las implementaciones en Ensamblador
 
 Se uso el Ensamblador GAS
 
+El Makefile debe de ser adaptado para tu uso, pero puede que lo adapte para que puedas agregar y quitar tantas carpetas a tu gusto dentro de la carpeta main.
+
 Una vez completada mi actividad escolar, la biblioteca dejará de recibir mantenimiento y actualizaciones.
 
 Se considerará que la actividad está completa al llegar a la versión alfa 1.0.0
