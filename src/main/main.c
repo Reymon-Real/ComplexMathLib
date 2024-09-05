@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h.h>
+#include <stdbool.h>
 #include <CML.h>
+#include <CMLPRM.h>
+#include <CML_utils.h>
 
 int main(void) {
 	complejo_t a = init_complejo(1, 1);

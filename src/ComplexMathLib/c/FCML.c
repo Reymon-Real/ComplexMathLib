@@ -8,6 +8,20 @@
 
 #include <CML.h>
 
+static double mag(double a, double b) {
+	return sqrt( pow(a, 2) + pow(b, 2) );
+}
+
+static double ang(double a, double b) {
+	double grados = atan2(b, a) * (180.0 / M_PI);
+
+	grados = fmod(grados, 360);
+
+	if(grados < 0) grados += 360;
+
+	return grados;
+}
+
 /**
  * Inicializa el número complejo
  * 
@@ -15,7 +29,7 @@
  * complejo_t numero = init_complejo(real, imaginario);
  */
 complejo_t init_complejo(double num1, double num2) {
-	return (complejo_t) { num1, num2 };
+	return (complejo_t) { num1, num2,  mag(num1, num2), ang(num1, num2) };
 }
 
 /**

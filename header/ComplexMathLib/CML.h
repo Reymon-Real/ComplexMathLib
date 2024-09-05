@@ -9,6 +9,7 @@
 #ifndef __CML_H__
 #define __CML_H__
 #include <stdio.h>
+#include <math.h>
 
 /**
  * Estructura que define los números complejosS
@@ -16,6 +17,8 @@
 typedef struct NComplejos {
 	double real;
 	double img;
+	double magt;
+	double ang;
 } complejo_t;
 
 extern double suma(double num1, double num2);  // Función definida en ASM
