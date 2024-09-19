@@ -1,7 +1,7 @@
 # ComplexMathLib
  La biblioteca ComplexMathLib es una colección de funciones en lenguaje C diseñadas específicamente para trabajar con números complejos. Estas funciones permiten realizar operaciones matemáticas en la parte real e imaginaria de los números complejos, como suma, resta, multiplicación, división, potencias, raíces y módulos.
 
-## Versión 0.9.2
+## Versión 1.0.0
 
 ## Características clave:
 
